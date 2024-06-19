@@ -22,6 +22,7 @@ const MultiStepForm = () => {
 
   const handleNext = () => {
     setStep(step + 1);
+    handleSave()
   };
 
   const handleBack = () => {

@@ -29,7 +29,7 @@ const FormOne = ({ onSave, data }) => {
     const validationErrors = validate();
     setErrors(validationErrors); 
     if (Object.keys(validationErrors).length === 0) {
-      onSave({ emailId, password });
+      onSave({ emailId, password }); // Save data if no validation errors
     }
   };
 
@@ -57,7 +57,7 @@ const FormOne = ({ onSave, data }) => {
           onClick={togglePasswordVisibility}
           className="absolute right-2 top-10 cursor-pointer"
         >
-          {passwordVisible ? 'close' : 'open'}
+          {passwordVisible ? 'Close' : 'Open'}
         </span>
         {errors.password && <p className="text-red-500">{errors.password}</p>}
       </div>
